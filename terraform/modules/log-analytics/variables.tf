@@ -5,8 +5,13 @@ variable log_analytics_workspace_name {
 variable log_analytics_workspace_sku {
 }
 
+variable "rg_name" {
+  default = "WTC_SOL1"
+}
+
+
 variable "location" {
-  default = "uksouth"
+  default = "eastus"
 }
 
 variable "environment" {

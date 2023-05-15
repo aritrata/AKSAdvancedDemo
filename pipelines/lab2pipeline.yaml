@@ -7,11 +7,11 @@ pr: none
 
 variables:
   - name: backendServiceArm
-    value: 'azure-devops-journey-service-connection'
+    value: 'aksadvanced_serv_con'
   - name: backendAzureRmResourceGroupName
-    value: 'devops-journey-rg'
+    value: 'WTC_SOL1'
   - name: backendAzureRmStorageAccountName
-    value: 'devopsjourneyazuredevops'
+    value: 'aksadvancedstore'
   - name: backendAzureRmContainerName
     value: 'tfstate'
   - name: backendAzureRmKey
@@ -19,7 +19,7 @@ variables:
   - name: environment
     value: 'production'
   - name: terraform_version
-    value: '1.2.6'
+    value: '1.4.6'
 
 stages :
   - stage: validate

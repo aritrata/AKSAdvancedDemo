@@ -5,8 +5,8 @@ provider "azurerm" {
 
 terraform {
     backend "azurerm" {
-      resource_group_name = "devops-journey-rg"   
-      storage_account_name = "devopsjourneyazuredevops"
+      resource_group_name = "WTC_SOL1"   
+      storage_account_name = "aksadvancedstore"
       container_name = "terraform.tfstate`"
     }
 }

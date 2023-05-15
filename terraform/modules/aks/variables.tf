@@ -4,7 +4,7 @@ variable "name" {
 }
 
 variable "location" {
-  default = "uksouth"
+  default = "eastus"
 }
 
 variable "ssh_public_key" {
@@ -21,15 +21,16 @@ variable "vm_size" {
 }
 
 variable "dns_prefix" {
-    default = "tamopsdns"
+    default = "aksadvdns"
 }
+
+variable "rg_name" {
+  default = "WTC_SOL1"
+}
+
 
 variable "kubernetes_cluster_rbac_enabled" {
   default = "true"
-}
-
-variable "aks_admins_group_object_id" {
-  default = "e97b6454-3fa1-499e-8e5c-5d631e9ca4d1"
 }
 
 variable "addons" {
@@ -51,4 +52,12 @@ variable agic_subnet_id {
 }
 
 variable "environment" {
+}
+
+variable "aks_service_principal_app_id" {
+  default = "f57ebc8d-cdc1-4a1f-93a6-206ca7e84a92"
+}
+
+variable "aks_service_principal_client_secret" {
+  default = "-dT8Q~xxKq46C4h3iuZ8Qi60mbzrrzwucQzyNdsi"
 }

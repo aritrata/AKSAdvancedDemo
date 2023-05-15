@@ -8,6 +8,12 @@ variable "location" {
   description = "Location of Resources"
 }
 
+variable "rg_name" {
+  type        = string
+  description = "Resource Group Name"
+  default = "WTC_SOL1"
+}
+
 variable "vnet_name" {
   type        = string
   description = "Virtual Network Name"
@@ -72,4 +78,52 @@ variable "environment" {
 variable "ssh_public_key" {
   type        = string
   description = "SSH key for AKS Cluster"
+}
+
+# The following two variable declarations are placeholder references.
+# Set the values for these variable in terraform.tfvars
+variable "aks_service_principal_app_id" {
+  default = "f57ebc8d-cdc1-4a1f-93a6-206ca7e84a92"
+}
+
+variable "aks_service_principal_client_secret" {
+  default = "-dT8Q~xxKq46C4h3iuZ8Qi60mbzrrzwucQzyNdsi"
+}
+
+variable "app_insights_name" {
+  type = string
+  description = "Application Insights Name"
+}
+
+variable "application_type" {
+  type = string
+  description = "Application Insights Type"
+}
+/*
+variable "keyvault_name" {
+  type = string
+  description = "Key Vault Name"
+}
+
+variable "access_policy_id" {
+  type = string
+  description = "Object ID for Key Vault Policy"
+}*/
+
+
+variable "sql_server_name" {
+  description = "The name of the Azure SQL Server to be     created or to have the database on - needs to be unique,     lowercase between 3 and 24 characters including the prefix"
+}
+
+variable "sql_server_admin_user" {
+  description = "The name of the Azure SQL Server Admin user     for the Azure SQL Database"
+}
+
+variable "sql_server_admin_password" {
+  description = "The Azure SQL Database users password"
+}
+
+variable "sql_database_name" {
+  description = "The name of the Azure SQL database on - needs     to be unique, lowercase between 3 and 24 characters     including the prefix"
+  default     = "mhcdb"
 }

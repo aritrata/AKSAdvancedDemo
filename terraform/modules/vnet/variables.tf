@@ -1,8 +1,12 @@
 variable "name" {
 }
 
+variable "rg_name" {
+  default = "WTC_SOL1"
+}
+
 variable "location" {
-  default = "uksouth"
+  default = "eastus"
 }
 
 variable "network_address_space" {
