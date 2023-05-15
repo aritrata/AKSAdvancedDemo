@@ -37,3 +37,8 @@ az sshkey create --name "mySSHKey" --resource-group "WTC_SOL1"
 
 # Get AKS Version
 az aks get-versions --location eastus --output table
+
+# Get Application Insight Instrumentation
+az extension add --name application-insights 
+az monitor app-insights component show --app WTC_SOL1 -g WTC_SOL1
+az keyvault secret set --vault-name "aksadvancedkv-kv" --name "AIKEY" --value "92236fbd-510b-435c-bd7e-f1782140c741"
